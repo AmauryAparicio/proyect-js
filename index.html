@@ -6,9 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto con JS</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/green.css" id="theme">
+
+    <!-- ------------------------------- jQuery -------------------------------- -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- ------------------------------- Slider -------------------------------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- ------------------------------ Moment JS ------------------------------ -->
+    <script type="text/javascript" src="js/moment.js"></script>
+
+    <!-- ------------------------------- Scripts ------------------------------- -->
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
+    <div id="selector-theme">
+        <div id="toGreen">
+
+        </div>
+        <div id="toRed">
+
+        </div>
+        <div id="toBlue">
+
+        </div>
+    </div>
     <section id="global">
         <header>
             <div id="logo">
@@ -28,31 +53,24 @@
         <!-- ------------------------------- Slider -------------------------------- -->
 
         <div id="slider">
-
+            <div class="galeria">
+                <div>
+                    <img src="img/hojas.jpg" title="Hojas">
+                </div>
+                <div>
+                    <img src="img/rojo.jpg" title="Rojo">
+                </div>
+                <div>
+                    <img src="img/cielo.jpg" title="Cielo">
+                </div>
+            </div>
         </div>
 
         <!-- ------------------------------- Content ------------------------------- -->
 
         <section id="content">
             <div id="posts">
-                <article class="post">
-                    <h2>Titulo del articulo</h2>
-                    <span class="date">Fecha de publicación</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita laboriosam itaque, quaerat at fuga minima tempore? Odio temporibus, consectetur fugiat commodi amet perferendis quos similique accusantium? Pariatur cum veniam doloribus
-                        architecto, vel numquam obcaecati dolores, quo, earum dicta debitis sed quis! Sint tempore quidem natus omnis mollitia exercitationem praesentium minima blanditiis laboriosam voluptatem. Laborum facere accusantium, iusto commodi
-                        dolore dicta ex illum voluptatum quas a minima obcaecati recusandae temporibus totam ullam in amet sequi quia illo! Recusandae necessitatibus minima explicabo! Ipsum repellat, repellendus non voluptatem quis iste perferendis nobis
-                        ad saepe adipisci repudiandae sed, exercitationem error alias id cupiditate sunt!</p>
-                    <a href="#" class="button-more">Leer más...</a>
-                </article>
-                <article class="post">
-                    <h2>Titulo del articulo</h2>
-                    <span class="date">Fecha de publicación</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita laboriosam itaque, quaerat at fuga minima tempore? Odio temporibus, consectetur fugiat commodi amet perferendis quos similique accusantium? Pariatur cum veniam doloribus
-                        architecto, vel numquam obcaecati dolores, quo, earum dicta debitis sed quis! Sint tempore quidem natus omnis mollitia exercitationem praesentium minima blanditiis laboriosam voluptatem. Laborum facere accusantium, iusto commodi
-                        dolore dicta ex illum voluptatum quas a minima obcaecati recusandae temporibus totam ullam in amet sequi quia illo! Recusandae necessitatibus minima explicabo! Ipsum repellat, repellendus non voluptatem quis iste perferendis nobis
-                        ad saepe adipisci repudiandae sed, exercitationem error alias id cupiditate sunt!</p>
-                    <a href="#" class="button-more">Leer más...</a>
-                </article>
+                <!-- ---------------------- Cargar post desde un json ---------------------- -->
             </div>
             <aside id="sidebar">
                 <div id="about">
