@@ -18,6 +18,9 @@
     <!-- ------------------------------ Moment JS ------------------------------ -->
     <script type="text/javascript" src="js/moment.js"></script>
 
+    <!-- ------------------------------ Validator ------------------------------ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
     <!-- ------------------------------- Scripts ------------------------------- -->
     <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -48,22 +51,36 @@
 
         <section id="content">
             <div id="box">
-                <h2>Sobre mi</h2>
-                <!-- ---------------------- Cargar acordeón ---------------------- -->
-                <div id="acordeon">
-                    <h3>¿Quiénes somos?</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla alias provident facilis earum in tempore, error veritatis fuga adipisci fugiat voluptate neque dicta sunt magni temporibus sit quasi porro eligendi!</p>
-                    </div>
-                    <h3>Nuestros servicios</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla alias provident facilis earum in tempore, error veritatis fuga adipisci fugiat voluptate neque dicta sunt magni temporibus sit quasi porro eligendi!</p>
-                    </div>
-                    <h3>Nuestros clientes</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla alias provident facilis earum in tempore, error veritatis fuga adipisci fugiat voluptate neque dicta sunt magni temporibus sit quasi porro eligendi!</p>
-                    </div>
-                </div>
+
+                <!-- ----------------------- Formulario de contacto ------------------------ -->
+
+                <h2>Contacto</h2>
+
+                <form action="" method="POST" id="form_contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric" />
+
+                    <label for="surname">Apellidos</label>
+                    <input type="text" name="surname" data-validation="alphanumeric" />
+
+                    <label>Email</label>
+                    <input type="email" name="email" data-validation="email" />
+
+                    <label for="sex">Sexo</label>
+                    <select name="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+
+                    <label for="date">Fecha de nacimiendo</label>
+                    <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy" />
+
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" data-validation="number" />
+
+                    <input type="submit" value="Enviar" />
+                </form>
+
             </div>
             <aside id="sidebar">
                 <div id="about">

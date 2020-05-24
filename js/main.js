@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     /* --------------------------------- Slider --------------------------------- */
 
-    if (window.location.href.indexOf('index') > -1) {
+    if (window.location.href.indexOf("index") > -1) {
         $('.galeria').bxSlider({
             auto: true,
             responsive: true,
@@ -100,5 +100,26 @@ $(document).ready(function() {
 
     if (window.location.href.indexOf("about") > -1) {
         $('#acordeon').accordion();
+    }
+
+    /* ---------------------------------- Relog --------------------------------- */
+    if (window.location.href.indexOf("reloj")) {
+        setInterval(function() {
+            var reloj = moment().locale('es-us').format('LTS');
+            $("#reloj").html(reloj);
+        }, 1000);
+    }
+
+    /* ------------------------------- Validación ------------------------------- */
+
+    if (window.location.href.indexOf("contact")) {
+        $("form input[name='date']").datepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+        $.validate({
+            lang: 'es',
+            errorMessagePosition: 'top',
+            scrollToTopOnError: true
+        });
     }
 });
